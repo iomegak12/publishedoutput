@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CustomerServicesWeb</name>
+    </assembly>
+    <members>
+        <member name="T:CustomerServicesWeb.Controllers.Implementations.CustomersApiController">
+            <summary>
+            Customers API Implementation
+            </summary>
+        </member>
+        <member name="M:CustomerServicesWeb.Controllers.Implementations.CustomersApiController.#ctor(CustomerServicesWeb.ORM.ORM_Interfaces.ICustomersContext)">
+            <summary>
+            Constructor with Customers Context
+            </summary>
+            <param name="customersContext"></param>
+        </member>
+        <member name="M:CustomerServicesWeb.Controllers.Implementations.CustomersApiController.GetCustomer(System.Int32)">
+            <summary>
+            Gets Customer Detail by Customer Reference Id
+            </summary>
+            <param name="customerId">Reference Id</param>
+            <returns>Customer Detail</returns>
+        </member>
+        <member name="M:CustomerServicesWeb.Controllers.Implementations.CustomersApiController.GetCustomers">
+            <summary>
+            Gets All Customer Records
+            </summary>
+            <returns>Array of Customers</returns>
+        </member>
+        <member name="M:CustomerServicesWeb.Controllers.Implementations.CustomersApiController.GetCustomersByName(System.String)">
+            <summary>
+            Searches Customers By Name
+            </summary>
+            <param name="customerName">Search String</param>
+            <returns>Array of Matching Customer Records</returns>
+        </member>
+        <member name="T:CustomerServicesWeb.Controllers.Interfaces.ICustomersApiController">
+            <summary>
+            API Interface for Enterprise Customers Access
+            </summary>
+        </member>
+        <member name="M:CustomerServicesWeb.Controllers.Interfaces.ICustomersApiController.GetCustomers">
+            <summary>
+            Gets All Customer Records
+            </summary>
+            <returns>Array of Customers</returns>
+        </member>
+        <member name="M:CustomerServicesWeb.Controllers.Interfaces.ICustomersApiController.GetCustomersByName(System.String)">
+            <summary>
+            Searches Customers By Name
+            </summary>
+            <param name="customerName">Search String</param>
+            <returns>Array of Matching Customer Records</returns>
+        </member>
+        <member name="M:CustomerServicesWeb.Controllers.Interfaces.ICustomersApiController.GetCustomer(System.Int32)">
+            <summary>
+            Gets Customer Detail by Customer Reference Id
+            </summary>
+            <param name="customerId">Reference Id</param>
+            <returns>Customer Detail</returns>
+        </member>
+        <member name="T:CustomerServicesWeb.Models.EnterpriseCustomer">
+            <summary>
+            Customer Model
+            </summary>
+        </member>
+        <member name="P:CustomerServicesWeb.Models.EnterpriseCustomer.CustomerId">
+            <summary>
+            Unique Identifier
+            </summary>
+        </member>
+        <member name="P:CustomerServicesWeb.Models.EnterpriseCustomer.CustomerName">
+            <summary>
+            Customer Full Name
+            </summary>
+        </member>
+        <member name="P:CustomerServicesWeb.Models.EnterpriseCustomer.Address">
+            <summary>
+            Corporate and Registered Address
+            </summary>
+        </member>
+        <member name="P:CustomerServicesWeb.Models.EnterpriseCustomer.Email">
+            <summary>
+            Communication Email
+            </summary>
+        </member>
+        <member name="P:CustomerServicesWeb.Models.EnterpriseCustomer.PhoneNumber">
+            <summary>
+            Communication Phone Number
+            </summary>
+        </member>
+        <member name="P:CustomerServicesWeb.Models.EnterpriseCustomer.CreditLimit">
+            <summary>
+            Purchase Credit Limit
+            </summary>
+        </member>
+        <member name="P:CustomerServicesWeb.Models.EnterpriseCustomer.ActiveStatus">
+            <summary>
+            Customer Active Status
+            </summary>
+        </member>
+        <member name="P:CustomerServicesWeb.Models.EnterpriseCustomer.Remarks">
+            <summary>
+            Complete Remarks
+            </summary>
+        </member>
+        <member name="M:CustomerServicesWeb.Models.EnterpriseCustomer.ToString">
+            <summary>
+            String Format of Customer Model
+            </summary>
+            <returns>Formatted Message</returns>
+        </member>
+        <member name="T:CustomerServicesWeb.ORM.ORM_Implementations.CustomersContext">
+            <summary>
+            Customers Contet Implementation
+            </summary>
+        </member>
+        <member name="M:CustomerServicesWeb.ORM.ORM_Implementations.CustomersContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{CustomerServicesWeb.ORM.ORM_Implementations.CustomersContext})">
+            <summary>
+            Constructor with DB Context
+            </summary>
+            <param name="dbContextOptions">DB Context Features</param>
+        </member>
+        <member name="M:CustomerServicesWeb.ORM.ORM_Implementations.CustomersContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            ORM Configuration
+            </summary>
+            <param name="modelBuilder">ORM Model Builder</param>
+        </member>
+        <member name="P:CustomerServicesWeb.ORM.ORM_Implementations.CustomersContext.Customers">
+            <summary>
+            Customers Entity
+            </summary>
+        </member>
+        <member name="T:CustomerServicesWeb.ORM.ORM_Implementations.EnterpriseCustomerEntityTypeConfiguration">
+            <summary>
+            ORM Mapping Class for Enterprise Customers
+            </summary>
+        </member>
+        <member name="M:CustomerServicesWeb.ORM.ORM_Implementations.EnterpriseCustomerEntityTypeConfiguration.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{CustomerServicesWeb.Models.EnterpriseCustomer})">
+            <summary>
+            Mapping Configuration
+            </summary>
+            <param name="builder">Model Builder</param>
+        </member>
+        <member name="T:CustomerServicesWeb.ORM.ORM_Interfaces.ICustomersContext">
+            <summary>
+            Customers Db Context Interface
+            </summary>
+        </member>
+        <member name="P:CustomerServicesWeb.ORM.ORM_Interfaces.ICustomersContext.Customers">
+            <summary>
+            Entity to Represent Customers
+            </summary>
+        </member>
+    </members>
+</doc>
